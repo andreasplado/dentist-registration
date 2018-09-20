@@ -1,4 +1,4 @@
-# dentist-registration
+# Dentist registration
 An application for dentist registration
 
 ![alt tag](http://phonewe.freeiz.com/registration.png)
