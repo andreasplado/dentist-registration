@@ -11,7 +11,22 @@
 
     <link href="http://phonewe.freeiz.com/CGI/main.css" rel="stylesheet"></link>
     <link href="http://phonewe.freeiz.com/CGI/hover-min.css" rel="stylesheet"></link>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.js"></script>
 </head>
+
+<script>
+    function search(){
+        var name = $("#searchbox").val();
+        if(name!= ""){
+            window.location.href="/search";
+        }
+    }
+</script>
+
 <body>
     <div class="jumbotron text-center banner">
         <h1>Hambaarsti juurde registreerumine</h1>
@@ -19,7 +34,7 @@
         <div class="container">
             <div class="row">
                 <div class="input-group col-sm-12 pl-12">
-                    <input type="text" class="form-control searchbox" placeholder="Otsi hambaarsti"></input>
+                    <input type="text" class="form-control searchbox" id="searchbox" placeholder="Otsi hambaarsti"></input>
                     <div class="input-group-btn">
                         <button class="btn btn-default searchbtn" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -52,5 +67,21 @@
     </div>
     <div id="snackbar"></div>
 </body>
-<script src="http://phonewe.freeiz.com/CGI/main.js"></script>
+<script>
+  $( function() {
+    var allDentists= [
+        <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
+        ];
+    $( "#searchbox" ).keyup(function(){
+        $( "#searchbox" ).autocomplete({
+          source: allDentists,
+          select: function(event, ui) {
+                $('#searchbox').val(ui.item.value);
+                search();
+                return false;
+            }
+        });
+    });
+  });
+</script>
 </html>

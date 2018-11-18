@@ -41,7 +41,6 @@ public class DentistVisitService {
         dentistVisitDao.updateVisit(visit);
     }
 
-
     public void deleteVisit(int id){
         dentistVisitDao.deleteVisit(id);
     }

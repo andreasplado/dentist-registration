@@ -42,6 +42,7 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
     public String showMainPage(DentistVisitDTO dentistVisitDTO, Model model) {
         dentistVisitService.listVisits();
         model.addAttribute("listVisits", dentistVisitService.listVisits());
+        model.addAttribute("dentistList", dentistVisitService.getDentistList());
         return "main";
     }
     @GetMapping("/results")
