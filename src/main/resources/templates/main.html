@@ -27,6 +27,7 @@
    function login(){
         var username = $("#username").val();
         var password = $("#password").val();
+
         if(username != "" &amp;&amp; password != ""){
             window.location.href="/login";
             alert("Logged in");
@@ -101,9 +102,10 @@
             }
         });
     });
-   $( "#login" ).click(function() {
-        login();
-   });
+    $( "#login" ).click(function() {
+            login();
+    });
+  }
 
 
 </script>
