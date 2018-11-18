@@ -17,22 +17,24 @@
 </head>
 
 <script>
-    function search(){
-        var name = $("#searchbox").val();
-        if(name!= ""){
-            window.location.href="/search";
+    <![CDATA[
+        function search(){
+            var name = $("#searchbox").val();
+            if(name!= ""){
+                window.location.href="/search";
+            }
         }
-    }
 
-   function login(){
-        var username = $("#username").val();
-        var password = $("#password").val();
+       function login(){
+            var username = $("#username").val();
+            var password = $("#password").val();
 
-        if(username != "" &amp;&amp; password != ""){
-            window.location.href="/login";
-            alert("Logged in");
-        }
-   }
+            if(username != "" && password != ""){
+                window.location.href="/login";
+                alert("Logged in");
+            }
+       }
+   ]]>
 </script>
 
 <body>
@@ -88,25 +90,26 @@
 </div>
 </body>
 <script>
-  $( function() {
-    var allDentists= [
-        <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
-        ];
-    $( "#searchbox" ).keyup(function(){
-        $( "#searchbox" ).autocomplete({
-          source: allDentists,
-          select: function(event, ui) {
-                $('#searchbox').val(ui.item.value);
-                search();
-                return false;
-            }
+    <![CDATA[
+      $( function() {
+        var allDentists= [
+            <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
+            ];
+        $( "#searchbox" ).keyup(function(){
+            $( "#searchbox" ).autocomplete({
+              source: allDentists,
+              select: function(event, ui) {
+                    $('#searchbox').val(ui.item.value);
+                    search();
+                    return false;
+                }
+            });
         });
-    });
-    $( "#login" ).click(function() {
-            login();
-    });
-  });
-
+        $( "#login" ).click(function() {
+                login();
+        });
+      });
+    ]]>
 
 </script>
 </html>
