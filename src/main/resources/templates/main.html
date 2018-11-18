@@ -17,24 +17,22 @@
 </head>
 
 <script>
-    <![CDATA[
-        function search(){
-            var name = $("#searchbox").val();
-            if(name!= ""){
-                window.location.href="/search";
-            }
+    function search(){
+        var name = $("#searchbox").val();
+        if(name!= ""){
+            window.location.href="/search";
         }
+    }
 
-       function login(){
-            var username = $("#username").val();
-            var password = $("#password").val();
+    function login(){
+        var username = $("#username").val();
+        var password = $("#password").val();
 
-            if(username != "" && password != ""){
-                window.location.href="/login";
-                alert("Logged in");
-            }
-       }
-   ]]>
+        if(username != "" && password != ""){
+            window.location.href="/login";
+            alert("Logged in");
+        }
+    }
 </script>
 
 <body>
@@ -90,8 +88,7 @@
 </div>
 </body>
 <script>
-    <![CDATA[
-      $( function() {
+    $( function() {
         var allDentists= [
             <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
             ];
@@ -106,10 +103,8 @@
             });
         });
         $( "#login" ).click(function() {
-                login();
+            login();
         });
-      });
-    ]]>
-
+    });
 </script>
 </html>
