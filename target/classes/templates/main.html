@@ -16,7 +16,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.js"></script>
 </head>
 
-<script>
+<script th:inline="javascript">
+/*<![CDATA[*/
     function search(){
         var name = $("#searchbox").val();
         if(name!= ""){
@@ -32,7 +33,7 @@
             window.location.href="/login";
             alert("Logged in");
         }
-   }
+}/*]]>*/
 </script>
 
 <body>
@@ -87,7 +88,8 @@
     </div>
 </div>
 </body>
-<script>
+<script th:inline="javascript">
+/*<![CDATA[*/
   $( function() {
     var allDentists= [
         <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
@@ -107,7 +109,6 @@
     });
   });
 
-
-
+/*]]>*/
 </script>
 </html>
