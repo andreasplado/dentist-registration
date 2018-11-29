@@ -29,12 +29,12 @@
                     <tbody>
                         <tr th:each="listVisit : ${listVisits}" th:onclick="'viewVisit(' + ${listVisit.id} + ');'" class="search-result-item hvr-fade">
                             <td
-                                th:value="${listVisit.dentistName}" th:text="${listVisit.dentistName}">Hambaarsti nimi</td>
+                                th:value="${listVisit.name}" th:text="${listVisit.name}">Hambaarsti nimi</td>
                             <td
-                                th:value="${listVisit.visitTime}" th:text="${listVisit.visitTime}">Kylastusaeg</td>
+                                th:value="${listVisit.price}" th:text="${listVisit.price}">Kylastusaeg</td>
                         </tr>
                     </tbody>
-                    <div th:if="${#lists.isEmpty(listVisits)}" th:utext="'Otsingutulemusi vastele \''  + ${dentistName} +'\' ei leitud!'">
+                    <div th:if="${#lists.isEmpty(listVisits)}" th:utext="'Otsingutulemusi vastele \''  + ${name} +'\' ei leitud!'">
                     </div>
                 </table>
             </div>

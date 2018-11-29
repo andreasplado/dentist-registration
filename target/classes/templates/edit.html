@@ -24,7 +24,7 @@
             <li><a href="/results">Broneeritud ajad</a></li>
         </ul>
         <div class="input-group col-sm-4 pull-right search_wrapper_top">
-            <input type="text" class="form-control searchbox" placeholder="Otsi hambaarsti" th:value="${dentistName}"></input>
+            <input type="text" class="form-control searchbox" placeholder="Otsi hambaarsti" th:value="${name}"></input>
             <div class="input-group-btn">
                 <button class="btn btn-default searchbtn" type="submit">
                     <i class="glyphicon glyphicon-search"></i>
@@ -37,13 +37,13 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group">
-                <form action="#" th:action="@{/update?id=} + ${singleListVisit.id}" th:object="${dentistVisitDTO}" method="post">
+                <form action="#" th:action="@{/update?id=} + ${singleListVisit.id}" th:object="${productDTO}" method="post">
                     <input type="hidden" th:value="${singleListVisit.id}" />
                     <table>
                         <tr>
                             <td><p th:text="#{arsti.nimi}">arsti.nimi</p></td>
                             <td>
-                                <input type="text" th:value="${singleListVisit.dentistName}" id="dentistName" name="dentistName" class="form-control standard-input"/>
+                                <input type="text" th:value="${singleListVisit.name}" id="name" name="name" class="form-control standard-input"/>
                             </td>
                             <td>
                                 <select class="form-control" id="selectDentist">
@@ -53,19 +53,19 @@
                                             th:selected="${dentistList.contains(singleListVisit.id)}">Hambaarsti nimi</option>
                                 </select>
                             </td>
-                            <td th:if="${#fields.hasErrors('dentistName')}" th:errors="*{dentistName}" id="name-error">Nime viga</td>
+                            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" id="name-error">Nime viga</td>
                         </tr>
                         <tr>
                             <td><p th:text="#{visiidi.kuupaev}">visiidi.kuupaev</p></td>
                             <td>
                                 <div class='input-group date' id='datetimepicker2'>
-                                    <input type="text" th:value="${singleListVisit.visitTime}" id="visitTime" name="visitTime"  class="form-control standard-input" />
+                                    <input type="text" th:value="${singleListVisit.price}" id="price" name="price"  class="form-control standard-input" />
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
                                 </div>
                             </td>
-                            <td th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}" id="date-time-error">Kuupäeva viga</td>
+                            <td th:if="${#fields.hasErrors('price')}" th:errors="*{price}" id="date-time-error">Kuupäeva viga</td>
                         </tr>
 
                         <tr>

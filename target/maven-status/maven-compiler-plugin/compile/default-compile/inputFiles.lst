@@ -1,8 +1,9 @@
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\WebConfiguration.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\controller\DentistAppController.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\controller\RedirectUnknownUrls.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\dao\entity\DentistVisitEntity.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\DentistAppApplication.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\dao\DentistVisitDao.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\dto\DentistVisitDTO.java
-C:\Users\Andreas\Desktop\VABA AEG\PROJEKTID\dentist-registration\src\main\java\com\cgi\dentistapp\service\DentistVisitService.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\TestApplication.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\controller\ProductController.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\dao\ProductDao.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\WebConfiguration.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\controller\RedirectUnknownUrls.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\dao\entity\ProductEntity.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\service\ProductService.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\utils\WebConfig.java
+C:\Users\Andreas\Desktop\test\src\main\java\ee\erply\dto\ProductDTO.java

@@ -92,7 +92,7 @@
 /*<![CDATA[*/
   $( function() {
     var allDentists= [
-        <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentistName}]]',</th:block>
+        <th:block th:each="dentist: ${dentistList}" th:inline="text">'[[${dentist.dentist_name}]]',</th:block>
         ];
     $( "#searchbox" ).keyup(function(){
         $( "#searchbox" ).autocomplete({
